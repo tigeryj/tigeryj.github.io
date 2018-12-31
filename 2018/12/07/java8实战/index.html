@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="一.为什么要学java8？ 代码表达能力更强，风格更简约。比如：对一个仓库里的苹果按重量进行排序，java8之前的代码可能是这样 12345Collections.sort(inventory, new Comparator&amp;lt;Apple&amp;gt;() &amp;#123;     public int compare(Apple a1, Apple a2)&amp;#123;        return a1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java8特性">
+<meta property="og:url" content="http://yoursite.com/2018/12/07/java8实战/index.html">
+<meta property="og:site_name" content="tiger&#39;s home">
+<meta property="og:description" content="一.为什么要学java8？ 代码表达能力更强，风格更简约。比如：对一个仓库里的苹果按重量进行排序，java8之前的代码可能是这样 12345Collections.sort(inventory, new Comparator&amp;lt;Apple&amp;gt;() &amp;#123;     public int compare(Apple a1, Apple a2)&amp;#123;        return a1">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/12/07/java8实战/pics/WX20181208-231822@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/07/java8实战/pics/WX20181208-231846@2x.png">
+<meta property="og:updated_time" content="2018-12-31T08:05:37.380Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java8特性">
+<meta name="twitter:description" content="一.为什么要学java8？ 代码表达能力更强，风格更简约。比如：对一个仓库里的苹果按重量进行排序，java8之前的代码可能是这样 12345Collections.sort(inventory, new Comparator&amp;lt;Apple&amp;gt;() &amp;#123;     public int compare(Apple a1, Apple a2)&amp;#123;        return a1">
+<meta name="twitter:image" content="http://yoursite.com/2018/12/07/java8实战/pics/WX20181208-231822@2x.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>java8特性</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2018/12/31/hello-world/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2017/06/20/刷题-栈和队列/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2018/12/07/java8实战/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2018/12/07/java8实战/&text=java8特性"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2018/12/07/java8实战/&title=java8特性"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2018/12/07/java8实战/&is_video=false&description=java8特性"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=java8特性&body=Check out this article: http://yoursite.com/2018/12/07/java8实战/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2018/12/07/java8实战/&title=java8特性"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2018/12/07/java8实战/&title=java8特性"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2018/12/07/java8实战/&title=java8特性"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2018/12/07/java8实战/&title=java8特性"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2018/12/07/java8实战/&name=java8特性&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#一-为什么要学java8？"><span class="toc-number">1.</span> <span class="toc-text">一.为什么要学java8？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二-开始函数式编程之路"><span class="toc-number">2.</span> <span class="toc-text">二.开始函数式编程之路</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        java8特性
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <span itemprop="name">tiger's home</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-12-07T15:28:51.427Z" itemprop="datePublished">2018-12-07</time>
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h4 id="一-为什么要学java8？"><a href="#一-为什么要学java8？" class="headerlink" title="一.为什么要学java8？"></a>一.为什么要学java8？</h4><ol>
+<li><p>代码表达能力更强，风格更简约。比如：对一个仓库里的苹果按重量进行排序，java8之前的代码可能是这样</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Collections.sort(inventory, <span class="keyword">new</span> Comparator&lt;Apple&gt;() &#123; </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Apple a1, Apple a2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a1.getWeight().compareTo(a2.getWeight()); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>而在java8里是这样的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inventory.sort(comparing(Apple::getWeight));</span><br></pre></td></tr></table></figure>
+<p>很明显，后者代码表达的更准确，以后也更容易维护。这种将函数传递给方法的方式，我们称之为函数式编程，也叫行为参数化，用更高级的一种方式来表达我们想要的东西。</p>
+</li>
+<li><p>代码效率更高、支持安全的并行执行。java8里的流实现并行，要比现有的有关线程安全的api实现的更容易。但是你的代码行为必须能够同时的对不同的输入安全的执行。</p>
+</li>
+</ol>
+<h4 id="二-开始函数式编程之路"><a href="#二-开始函数式编程之路" class="headerlink" title="二.开始函数式编程之路"></a>二.开始函数式编程之路</h4><p>小明是一个水果贩子，手里拿着一个<code>List&lt;Apple&gt; inventory</code>,客户想要这里面所有的绿苹果，而小明可能会实现如下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;Apple&gt; <span class="title">filterGreenApples</span><span class="params">(List&lt;Apple&gt; inventory)</span> </span>&#123;</span><br><span class="line">    List&lt;Apple&gt; result = <span class="keyword">new</span> ArrayList&lt;Apple&gt;();</span><br><span class="line">    <span class="keyword">for</span>(Apple apple: inventory)&#123; <span class="comment">//累积苹果的列表 </span></span><br><span class="line">        <span class="keyword">if</span>( <span class="string">"green"</span>.equals(apple.getColor() ) </span><br><span class="line">           &#123; </span><br><span class="line">               result.add(apple); <span class="comment">//仅仅选出绿苹果</span></span><br><span class="line">           &#125; </span><br><span class="line">     &#125; <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这是最直觉的思考方式下的结果，可当小明把全部的绿苹果打包完毕后，客户突然冒出一句，“红苹果也不错，我还是要所有的红苹果吧?”，小明气不打一处来，把上面的”green”换成”red”之后，当天晚上就加班搞了另外一个方法，才安然入睡</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;Apple&gt; <span class="title">filterApplesByColor</span><span class="params">(List&lt;Apple&gt; inventory, String color)</span> </span>&#123;</span><br><span class="line">        List&lt;Apple&gt; result = <span class="keyword">new</span> ArrayList&lt;Apple&gt;();</span><br><span class="line">        <span class="keyword">for</span> (Apple apple : inventory) &#123;</span><br><span class="line">            <span class="keyword">if</span> (apple.getColor().equals(color)) &#123;</span><br><span class="line">                result.add(apple);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>但是，突然有一天，小明又接到一个电话，对方说要3两以上的苹果，机智的小明实现了如下代码:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;Apple&gt; <span class="title">filterApplesByWeight</span><span class="params">(List&lt;Apple&gt; inventory, <span class="keyword">int</span> weight)</span> </span>&#123;</span><br><span class="line">        List&lt;Apple&gt; result = <span class="keyword">new</span> ArrayList&lt;Apple&gt;();</span><br><span class="line">        For(Apple apple:inventory)&#123;</span><br><span class="line">            <span class="keyword">if</span> (apple.getWeight() &gt; weight) &#123;</span><br><span class="line">                result.add(apple);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>但是小明发现，每次客户变化一个需求，就要重新搞一套方法，而且这里面的方法好多代码都是重复的，除了if里面的判断语句不一样而已。而且为了筛选苹果的方法和具体的筛选条件进行解耦，小明写了个接口，以后再有具体的筛选条件，就实现这个接口就可以了。如下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">ApplePredicate</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">boolean</span> <span class="title">test</span><span class="params">(Apple apple)</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AppleHeavyWeightPredicate</span> <span class="keyword">implements</span> <span class="title">ApplePredicate</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">test</span><span class="params">(Apple apple)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> apple.getWeight() &gt; <span class="number">150</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AppleGreenColorPredicate</span> <span class="keyword">implements</span> <span class="title">ApplePredicate</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">test</span><span class="params">(Apple apple)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"green"</span>.equals(apple.getColor());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>之后小明的挑选苹果的方法编程如下代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;Apple&gt; <span class="title">filterApples</span><span class="params">(List&lt;Apple&gt; inventory, ApplePredicate p)</span> </span>&#123;</span><br><span class="line">      List&lt;Apple&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">      <span class="keyword">for</span> (Apple apple : inventory) &#123;</span><br><span class="line">          <span class="keyword">if</span> (p.test(apple)) &#123;</span><br><span class="line">              result.add(apple);</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> result;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>从此以后，挑选苹果的方法和挑选苹果的条件就实现了解耦。小明松了一口气，对外宣称这就是我们的『行为参数化』，你看多方便，客户来一个条件，我就按照这个条件实现ApplePredicate接口，在里面写具体的业务逻辑，但是，随着客户的需求不断增多，小明发现，每次都需要新建一个类来包裹那里面一个test方法，说到底，不就是要一个test方法么。有没有更简单的方法呢？突然小明脑海中闪现出一个名词:匿名内部类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Apple&gt; redApples = filterApples(inventory, <span class="keyword">new</span> ApplePredicate() &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">test</span><span class="params">(Apple apple)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"red"</span>.equals(apple.getColor());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<p>就在小明用匿名内部类来传递自己筛选苹果的条件代码，用的热火朝天之际，java8的Lambda表达式突然宣告诞生，小明欣喜的跟上了时代的步伐:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Apple&gt; result = filterApples(inventory, (Apple apple) -&gt; <span class="string">"red"</span>.equals(apple.getColor()));</span><br></pre></td></tr></table></figure>
+<p>他突然感悟到所谓的大道至简是有点道理的。随着小明卖苹果的技术越来越精湛、效率越来越高，很快也开始主营卖香蕉、菠萝，聪明的小明一下子就明白，把原来的卖苹果那一套进一步抽象，适合卖所有的水果:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Predicate</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">boolean</span> <span class="title">test</span><span class="params">(T t)</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">List&lt;T&gt; <span class="title">filter</span><span class="params">(List&lt;T&gt; list, Predicate&lt;T&gt; p)</span> </span>&#123;</span><br><span class="line">    List&lt;T&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (T e : list) &#123;</span><br><span class="line">        <span class="keyword">if</span> (p.test(e)) &#123;</span><br><span class="line">            result.add(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样，小明平常就是这样经营他的水果摊的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Apple&gt; redApples = filter(inventory, (Apple apple) -&gt; <span class="string">"red"</span>.equals(apple.getColor()));</span><br><span class="line">List&lt;Orange&gt; heavyOranges=filter(inventory,(Orange o)-&gt; o.getWeight&gt;<span class="number">30</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这里Predicate，可以称之为函数式接口，其实它已经存在于<code>java.util.function</code>包中了。以后可以直接拿来用，爽歪歪有木有？只要该接口只包含一个抽象方法即可。函数式接口可以方便你写出Lambda表达式</p>
+</blockquote>
+<p>下图为java8中典型的函数式接口</p>
+<p><img src="/2018/12/07/java8实战/pics/WX20181208-231822@2x.png" alt=""></p>
+<p><img src="/2018/12/07/java8实战/pics/WX20181208-231846@2x.png" alt=""></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#一-为什么要学java8？"><span class="toc-number">1.</span> <span class="toc-text">一.为什么要学java8？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二-开始函数式编程之路"><span class="toc-number">2.</span> <span class="toc-text">二.开始函数式编程之路</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2018/12/07/java8实战/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2018/12/07/java8实战/&text=java8特性"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2018/12/07/java8实战/&title=java8特性"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2018/12/07/java8实战/&is_video=false&description=java8特性"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=java8特性&body=Check out this article: http://yoursite.com/2018/12/07/java8实战/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2018/12/07/java8实战/&title=java8特性"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2018/12/07/java8实战/&title=java8特性"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2018/12/07/java8实战/&title=java8特性"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2018/12/07/java8实战/&title=java8特性"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2018/12/07/java8实战/&name=java8特性&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 John Doe
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+

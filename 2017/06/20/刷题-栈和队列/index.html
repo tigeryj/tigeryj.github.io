@@ -11,15 +11,13 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="刷题--栈和队列">
 <meta property="og:url" content="http://yoursite.com/2017/06/20/刷题-栈和队列/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="tiger&#39;s home">
 <meta property="og:description" content="1.如何仅用递归函数和栈操作来逆序一个栈，不用其他数据结构123456789101112131415161718192021222324252627282930public class StackAndQueue &amp;#123;    public static void main(String[]args)&amp;#123;        Stack&amp;lt;Integer&amp;gt;stack=new St">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://oq3jo26oi.bkt.clouddn.com/markdown-img-paste-20170622163932944.png">
-<meta property="og:updated_time" content="2017-08-06T11:25:26.000Z">
+<meta property="og:updated_time" content="2018-12-31T07:31:42.998Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="刷题--栈和队列">
 <meta name="twitter:description" content="1.如何仅用递归函数和栈操作来逆序一个栈，不用其他数据结构123456789101112131415161718192021222324252627282930public class StackAndQueue &amp;#123;    public static void main(String[]args)&amp;#123;        Stack&amp;lt;Integer&amp;gt;stack=new St">
-<meta name="twitter:image" content="http://oq3jo26oi.bkt.clouddn.com/markdown-img-paste-20170622163932944.png">
     
     
         
@@ -75,7 +73,7 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/2018/12/31/hello-world/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" href="/2018/12/07/java8实战/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
@@ -122,7 +120,7 @@
 
     <div class="meta">
       <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-        <span itemprop="name">Hexo</span>
+        <span itemprop="name">tiger's home</span>
       </span>
       
     <div class="postdate">
@@ -153,7 +151,6 @@
 <hr>
 <p><em><strong>2.生成窗口最大值数组（page 19）</strong></em><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GetMaxWindow</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> []arr=&#123;<span class="number">4</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">7</span>&#125;;</span><br><span class="line">      <span class="keyword">int</span> []result = <span class="keyword">new</span> GetMaxWindow().getMaxWindow(arr,<span class="number">3</span>);</span><br><span class="line">        System.out.println(Arrays.toString(result));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] getMaxWindow(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> w) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr == <span class="keyword">null</span> || arr.length &lt; w || w &lt; <span class="number">1</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        LinkedList&lt;Integer&gt; qmax = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> []result=<span class="keyword">new</span> <span class="keyword">int</span>[arr.length-w+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> index=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!qmax.isEmpty()&amp;&amp; i - w == qmax.getFirst()) qmax.removeFirst();</span><br><span class="line">            <span class="keyword">while</span> (!qmax.isEmpty() &amp;&amp; arr[qmax.getLast()] &lt;= arr[i]) &#123;</span><br><span class="line">                qmax.removeLast();</span><br><span class="line">            &#125;</span><br><span class="line">            qmax.addLast(i);</span><br><span class="line">            <span class="keyword">if</span>(i+<span class="number">1</span>&gt;=w) result[index++]=arr[qmax.peekFirst()];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <hr>
-<p><img src="http://oq3jo26oi.bkt.clouddn.com/markdown-img-paste-20170622163932944.png" alt=""></p>
 
   </div>
 </article>
