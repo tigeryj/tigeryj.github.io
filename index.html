@@ -549,6 +549,288 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/03/框架问题/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tiger">
+      <meta itemprop="description" content="上不知天文，下不知地理">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="tiger's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2017/07/03/框架问题/" class="post-title-link" itemprop="url">框架问题</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-07-03 20:11 20:11:01" itemprop="dateCreated datePublished" datetime="2017-07-03T20:11:01+08:00">2017-07-03 20:11</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2017-07-03 21:56 21:56:04" itemprop="dateModified" datetime="2017-07-03T21:56:04+08:00">2017-07-03 21:56</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Interview/" itemprop="url" rel="index"><span itemprop="name">Interview</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/07/03/框架问题/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/07/03/框架问题/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/07/03/框架问题/" class="leancloud_visitors" data-flag-title="框架问题">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="1、什么是Spring框架？Spring框架有哪些主要模块？"><a href="#1、什么是Spring框架？Spring框架有哪些主要模块？" class="headerlink" title="1、什么是Spring框架？Spring框架有哪些主要模块？"></a>1、什么是Spring框架？Spring框架有哪些主要模块？</h4><p>Spring框架是一个为Java应用程序的开发提供了综合、广泛的基础性支持的Java平台。Spring帮助开发者解决了开发中基础性的问题，使得开发人员可以专注于应用程序的开发。Spring框架至今已集成了20多个模块。这些模块主要被分如下图所示的核心容器、数据访问/集成,、Web、AOP（面向切面编程）、工具、消息和测试模块。</p>
+<h4 id="2、使用Spring框架能带来哪些好处？"><a href="#2、使用Spring框架能带来哪些好处？" class="headerlink" title="2、使用Spring框架能带来哪些好处？"></a>2、使用Spring框架能带来哪些好处？</h4><ul>
+<li>使用IoC容器可以更加容易组合对象直接间接关系，面向接口编程，降低耦合。</li>
+<li>AOP可以更加容易的进行功能扩展，如安全、事务、日志等。</li>
+<li>spring的orm和DAO提供了与第三方持久层框架的良好整合。      </li>
+</ul>
+<h4 id="3、什么是控制反转-IOC-？什么是依赖注入？"><a href="#3、什么是控制反转-IOC-？什么是依赖注入？" class="headerlink" title="3、什么是控制反转(IOC)？什么是依赖注入？"></a>3、什么是控制反转(IOC)？什么是依赖注入？</h4><p>控制反转意味着将设计好的对象交给容器控制，而不是传统的在对象内部直接控制，Ioc和AOP是同一个概念从不同角度的描述。<br>依赖注入的三种方法1.构造器注入 2.setter方法注入3.接口注入    </p>
+<h4 id="4、BeanFactory和ApplicationContext有什么区别？"><a href="#4、BeanFactory和ApplicationContext有什么区别？" class="headerlink" title="4、BeanFactory和ApplicationContext有什么区别？"></a>4、BeanFactory和ApplicationContext有什么区别？</h4><p>BeanFactory 可以理解为含有bean集合的工厂类。BeanFactory 包含了种bean的定义，以便在接收到客户端请求时将对应的bean实例化。BeanFactory还包含了bean生命周期的控制，调用客户端的初始化方法（initialization methods）和销毁方法（destruction methods）。ApplicationContext包还提供了以下的功能：</p>
+<ul>
+<li>利用MessageSource进行国际化  </li>
+<li>强大的事件机制(Event)  </li>
+<li>底层资源的访问  ApplicationContext扩展了ResourceLoader(资源加载器)接口，从而可以用来加载多个Resource，而BeanFactory是没有扩展ResourceLoader</li>
+<li>BeanFactroy采用的是延迟加载形式来注入Bean的，即只有在使用到某个Bean时(调用getBean())，才对该Bean进行加载实例化，这样，我们就不能发现一些存在的spring的配置问题。而ApplicationContext则相反，它是在容器启动时，一次性创建了所有的Bean。这样，在容器启动时，我们就可以发现Spring中存在的配置错误。</li>
+</ul>
+<h4 id="5-Spring有几种配置方式？"><a href="#5-Spring有几种配置方式？" class="headerlink" title="5.Spring有几种配置方式？"></a>5.Spring有几种配置方式？</h4><p>将Spring配置到应用开发中有以下三种方式：基于XML的配置、基于注解的配置、基于Java的配置</p>
+<h4 id="6、如何用基于Java配置的方式配置Spring？"><a href="#6、如何用基于Java配置的方式配置Spring？" class="headerlink" title="6、如何用基于Java配置的方式配置Spring？"></a>6、如何用基于Java配置的方式配置Spring？</h4><p>Spring对Java配置的支持是由@Configuration注解和@Bean注解来实现的。由@Bean注解的方法将会实例化、配置和初始化一个新对象，这个对象将由Spring的IoC容器来管理。@Bean声明所起到的作用与<bean> 元素类似。被@Configuration所注解的类则表示这个类的主要目的是作为bean定义的资源。被@Configuration声明的类可以通过在同一个类的内部调用@bean方法来设置嵌入bean的依赖关系。</bean></p>
+<h4 id="7-请解释Spring-Bean的生命周期？（看）"><a href="#7-请解释Spring-Bean的生命周期？（看）" class="headerlink" title="7.请解释Spring Bean的生命周期？（看）"></a>7.请解释Spring Bean的生命周期？（看）</h4><p>Spring框架提供了以下四种方式来管理bean的生命周期事件：</p>
+<ul>
+<li>InitializingBean和DisposableBean回调接口</li>
+<li>针对特殊行为的其他Aware接口</li>
+<li>Bean配置文件中的Custom init()方法和destroy()方法</li>
+<li>@PostConstruct和@PreDestroy注解方式</li>
+</ul>
+<h4 id="8-Spring-Bean的作用域之间有什么区别？"><a href="#8-Spring-Bean的作用域之间有什么区别？" class="headerlink" title="8.Spring Bean的作用域之间有什么区别？"></a>8.Spring Bean的作用域之间有什么区别？</h4><ul>
+<li>singleton：这种bean范围是默认的，这种范围确保不管接受到多少个请求，每个容器中只有一个bean的实例，单例的模式由bean factory自身来维护。</li>
+<li>prototype：原形范围与单例范围相反，为每一个bean请求提供一个实例。</li>
+<li>request：在请求bean范围内会为每一个来自客户端的网络请求创建一个实例，在请求完成以后，bean会失效并被垃圾回收器回收。</li>
+<li>Session：与请求范围类似，确保每个session中有一个bean的实例，在session过期后，bean会随之失效。</li>
+<li>global-session：global-session和Portlet应用相关。当你的应用部署在Portlet容器中工作时，它包含很多portlet。如果你想要声明让所有的portlet共用全局的存储变量的话，那么这全局变量需要存储在global-session中。</li>
+</ul>
+<h4 id="9-什么是Spring-inner-beans？"><a href="#9-什么是Spring-inner-beans？" class="headerlink" title="9.什么是Spring inner beans？"></a>9.什么是Spring inner beans？</h4><p>在Spring框架中，无论何时bean被使用时，当仅被调用了一个属性。一个明智的做法是将这个bean声明为内部bean。内部bean可以用setter注入“属性”和构造方法注入“构造参数”的方式来实现。<br>比如，在我们的应用程序中，一个Customer类引用了一个Person类，我们的要做的是创建一个Person的实例，然后在Customer内部使用。</p>
+<h4 id="10-Spring框架中的单例Beans是线程安全的么？"><a href="#10-Spring框架中的单例Beans是线程安全的么？" class="headerlink" title="10.Spring框架中的单例Beans是线程安全的么？"></a>10.Spring框架中的单例Beans是线程安全的么？</h4><p>Spring框架并没有对单例bean进行任何多线程的封装处理。关于单例bean的线程安全和并发问题需要开发者自行去搞定。但实际上，大部分的Spring bean并没有可变的状态(比如Service类和DAO类)，所以在某种程度上说Spring的单例bean是线程安全的。如果你的bean有多种状态的话（比如 View Model 对象），就需要自行保证线程安全。<br>最浅显的解决办法就是将多态bean的作用域由“singleton”变更为“prototype”。</p>
+<h4 id="11-请解释Spring-Bean的自动装配？"><a href="#11-请解释Spring-Bean的自动装配？" class="headerlink" title="11.请解释Spring Bean的自动装配？"></a>11.请解释Spring Bean的自动装配？</h4><ul>
+<li>1.在XML配置文件实现自动装配</li>
+<li><img src="http://oq3jo26oi.bkt.clouddn.com/markdown-img-paste-20170703212820690.png" alt=""><ul>
+<li>根据名称自动装配（byName）。因为spring 容器中Bean的名称是唯一的，所以不会产生歧义，推荐使用这种方式。</li>
+<li>根据类型自动装配（byType）。在Spring容器中可能会找到多个跟需要注入的bean的类型相同的Bean，所以会产生歧义，Spring容器不知道注入哪个Bean，这时会抛出异常。</li>
+<li>根据构造器自动装配（constructor）。这种方式比较复杂，不做分析。</li>
+</ul>
+</li>
+<li>2.使用注解实现自动装配<ul>
+<li>修改User.java文件和XML配置文件就行了。</li>
+<li>使用@Autowired注解，和配置文件中加入<a href="context:annotation-config/" target="_blank" rel="noopener">context:annotation-config/</a>  </li>
+</ul>
+</li>
+</ul>
+<h4 id="12-请解释自动装配模式的区别？"><a href="#12-请解释自动装配模式的区别？" class="headerlink" title="12.请解释自动装配模式的区别？"></a>12.请解释自动装配模式的区别？</h4><ul>
+<li>no：这是Spring框架的默认设置，在该设置下自动装配是关闭的，开发者需要自行在bean定义中用标签明确的设置依赖关系。</li>
+<li>byName：该选项可以根据bean名称设置依赖关系。当向一个bean中自动装配一个属性时，容器将根据bean的名称自动在在配置文件中查询一个匹配的bean。如果找到的话，就装配这个属性，如果没找到的话就报错。</li>
+<li>byType：该选项可以根据bean类型设置依赖关系。当向一个bean中自动装配一个属性时，容器将根据bean的类型自动在在配置文件中查询一个匹配的bean。如果找到的话，就装配这个属性，如果没找到的话就报错。</li>
+<li>constructor：造器的自动装配和byType模式类似，但是仅仅适用于与有构造器相同参数的bean，如果在容器中没有找到与构造器参数类型一致的bean，那么将会抛出异常。</li>
+<li>autodetect：该模式自动探测使用构造器自动装配或者byType自动装配。首先，首先会尝试找合适的带参数的构造器，如果找到的话就是用构造器自动装配，如果在bean内部没有找到相应的构造器或者是无参构造器，容器就会自动选择byTpe的自动装配方式。</li>
+</ul>
+<h4 id="13-如何开启基于注解的自动装配？"><a href="#13-如何开启基于注解的自动装配？" class="headerlink" title="13.如何开启基于注解的自动装配？"></a>13.如何开启基于注解的自动装配？</h4><p>要使用 @Autowired，需要注册 AutowiredAnnotationBeanPostProcessor，可以有以下两种方式来实现：</p>
+<ul>
+<li><p>1、配置文件中的<bean>下引入 <a href="context:annotation-config" target="_blank" rel="noopener">context:annotation-config</a></bean></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;beans&gt;  </span><br><span class="line">    &lt;context:annotation-config /&gt;  </span><br><span class="line">&lt;/beans&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2.在bean配置文件中直接引入AutowiredAnnotationBeanPostProcessor</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;beans&gt;  </span><br><span class="line">    &lt;bean <span class="class"><span class="keyword">class</span></span>=<span class="string">"org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"</span>/&gt;  </span><br><span class="line">&lt;/beans&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="14-请举例解释-Required注解？"><a href="#14-请举例解释-Required注解？" class="headerlink" title="14.请举例解释@Required注解？"></a>14.请举例解释@Required注解？</h4><p>在产品级别的应用中，IoC容器可能声明了数十万了bean，bean与bean之间有着复杂的依赖关系。设值注解方法的短板之一就是验证所有的属性是否被注解是一项十分困难的操作。可以通过在<bean>中设置“dependency-check”来解决这个问题。<br>在应用程序的生命周期中，你可能不大愿意花时间在验证所有bean的属性是否按照上下文文件正确配置。或者你宁可验证某个bean的特定属性是否被正确的设置。即使是用“dependency-check”属性也不能很好的解决这个问题，在这种情况下，你需要使用@Required 注解。<br>需要用如下的方式使用来标明bean的设值方法。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EmployeeFactoryBean</span> <span class="keyword">extends</span> <span class="title">AbstractFactoryBean</span>&lt;<span class="title">Object</span>&gt;</span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> String designation;  </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getDesignation</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> designation;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="meta">@Required</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDesignation</span><span class="params">(String designation)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.designation = designation;  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">//more code here  </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></bean></p>
+<p>RequiredAnnotationBeanPostProcessor是Spring中的后置处理用来验证被@Required 注解的bean属性是否被正确的设置了。在使用RequiredAnnotationBeanPostProcesso来验证bean属性之前，首先要在IoC容器中对其进行注册：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean <span class="class"><span class="keyword">class</span></span>=<span class="string">"org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
+<h4 id="15-请举例说明-Qualifier注解？"><a href="#15-请举例说明-Qualifier注解？" class="headerlink" title="15.请举例说明@Qualifier注解？"></a>15.请举例说明@Qualifier注解？</h4><h4 id="16-构造方法注入和设值注入有什么区别？"><a href="#16-构造方法注入和设值注入有什么区别？" class="headerlink" title="16.构造方法注入和设值注入有什么区别？"></a>16.构造方法注入和设值注入有什么区别？</h4><ul>
+<li>在设值注入方法支持大部分的依赖注入，如果我们仅需要注入int、string和long型的变量，我们不要用设值的方法注入。对于基本类型，如果我们没有注入的话，可以为基本类型设置默认值。在构造方法注入不支持大部分的依赖注入，因为在调用构造方法中必须传入正确的构造参数，否则的话为报错。</li>
+<li>设值注入不会重写构造方法的值。如果我们对同一个变量同时使用了构造方法注入又使用了设置方法注入的话，那么构造方法将不能覆盖由设值方法注入的值。很明显，因为构造方法尽在对象被创建时调用。</li>
+<li>在使用设值注入时有可能还不能保证某种依赖是否已经被注入，也就是说这时对象的依赖关系有可能是不完整的。而在另一种情况下，构造器注入则不允许生成依赖关系不完整的对象。</li>
+<li>在设值注入时如果对象A和对象B互相依赖，在创建对象A时Spring会抛出sObjectCurrentlyInCreationException异常，因为在B对象被创建之前A对象是不能被创建的，反之亦然。所以Spring用设值注入的方法解决了循环依赖的问题，因对象的设值方法是在对象被创建之前被调用的。<h4 id="17-Spring框架中有哪些不同类型的事件？"><a href="#17-Spring框架中有哪些不同类型的事件？" class="headerlink" title="17 Spring框架中有哪些不同类型的事件？"></a>17 Spring框架中有哪些不同类型的事件？</h4>Spring的ApplicationContext 提供了支持事件和代码中监听器的功能。<br>我们可以创建bean用来监听在ApplicationContext 中发布的事件。ApplicationEvent类和在ApplicationContext接口中处理的事件，如果一个bean实现了ApplicationListener接口，当一个ApplicationEvent 被发布以后，bean会自动被通知。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AllApplicationEventListener</span> <span class="keyword">implements</span> <span class="title">ApplicationListener</span> &lt; <span class="title">ApplicationEvent</span> &gt;</span>&#123;  </span><br><span class="line">    <span class="meta">@Override</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onApplicationEvent</span><span class="params">(ApplicationEvent applicationEvent)</span>  </span></span><br><span class="line"><span class="function">    </span>&#123;  </span><br><span class="line">        <span class="comment">//process event  </span></span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Spring 提供了以下5中标准的事件：</p>
+<ul>
+<li>上下文更新事件（ContextRefreshedEvent）：该事件会在ApplicationContext被初始化或者更新时发布。也可以在调用ConfigurableApplicationContext 接口中的refresh()方法时被触发。</li>
+<li>上下文开始事件（ContextStartedEvent）：当容器调用ConfigurableApplicationContext的Start()方法开始/重新开始容器时触发该事件。</li>
+<li>上下文停止事件（ContextStoppedEvent）：当容器调用ConfigurableApplicationContext的Stop()方法停止容器时触发该事件。</li>
+<li>上下文关闭事件（ContextClosedEvent）：当ApplicationContext被关闭时触发该事件。容器被关闭时，其管理的所有单例Bean都被销毁。</li>
+<li>请求处理事件（RequestHandledEvent）：在Web应用中，当一个http请求（request）结束触发该事件。</li>
+<li>除了上面介绍的事件以外，还可以通过扩展ApplicationEvent 类来开发自定义的事件。</li>
+</ul>
+<h4 id="18、FileSystemResource和ClassPathResource有何区别？"><a href="#18、FileSystemResource和ClassPathResource有何区别？" class="headerlink" title="18、FileSystemResource和ClassPathResource有何区别？"></a>18、FileSystemResource和ClassPathResource有何区别？</h4><ul>
+<li>在FileSystemResource 中需要给出spring-config.xml文件在你项目中的相对路径或者绝对路径。在ClassPathResource中spring会在ClassPath中自动搜寻配置文件，所以要把ClassPathResource 文件放在ClassPath下。</li>
+<li>如果将spring-config.xml保存在了src文件夹下的话，只需给出配置文件的名称即可，因为src文件夹是默认。<br>简而言之，ClassPathResource在环境变量中读取配置文件，FileSystemResource在配置文件中读取配置文件。<h4 id="19、Spring-框架中都用到了哪些设计模式？"><a href="#19、Spring-框架中都用到了哪些设计模式？" class="headerlink" title="19、Spring 框架中都用到了哪些设计模式？"></a>19、Spring 框架中都用到了哪些设计模式？</h4>Spring框架中使用到了大量的设计模式，下面列举了比较有代表性的：</li>
+<li>代理模式—在AOP和remoting中被用的比较多。</li>
+<li>单例模式—在spring配置文件中定义的bean默认为单例模式。</li>
+<li>模板方法—用来解决代码重复的问题。比如. RestTemplate, JmsTemplate, JpaTemplate。</li>
+<li>前端控制器—Spring提供了DispatcherServlet来对请求进行分发。</li>
+<li>视图帮助(View Helper )—Spring提供了一系列的JSP标签，高效宏来辅助将分散的代码整合在视图里。</li>
+<li>依赖注入—贯穿于BeanFactory / ApplicationContext接口的核心理念。<br>工厂模式—BeanFactory用来创建对象的实例。</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/20/刷题-栈和队列/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -690,6 +972,1027 @@
           
             <div class="post-button text-center">
               <a class="btn" href="/2017/06/20/刷题-栈和队列/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/20/面试问题总结/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tiger">
+      <meta itemprop="description" content="上不知天文，下不知地理">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="tiger's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2017/06/20/面试问题总结/" class="post-title-link" itemprop="url">面试问题总结</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-06-20 15:04 15:04:19" itemprop="dateCreated datePublished" datetime="2017-06-20T15:04:19+08:00">2017-06-20 15:04</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2017-07-03 21:56 21:56:06" itemprop="dateModified" datetime="2017-07-03T21:56:06+08:00">2017-07-03 21:56</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Interview/" itemprop="url" rel="index"><span itemprop="name">Interview</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/06/20/面试问题总结/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/06/20/面试问题总结/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/06/20/面试问题总结/" class="leancloud_visitors" data-flag-title="面试问题总结">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1-谈谈ThreadLocal？"><a href="#1-谈谈ThreadLocal？" class="headerlink" title="1.谈谈ThreadLocal？"></a>1.谈谈ThreadLocal？</h3><p>线程局部变量(ThreadLocal)就是为每一个使用该变量的线程都提供一个变量值的副本，每一个线程都可以独立地改变自己的副本，而不会和其它线程的副本冲突。其实实现的思路很简单，在ThreadLocal类中有一个Map，用于存储每一个线程的变量的副本。同步机制采用了“以时间换空间”的方式，而ThreadLocal采用了“以空间换时间”的方式。前者仅提供一份变量，让不同的线程排队访问，而后者为每一个线程都提供了一份变量，因此可以同时访问而互不影响。</p>
+<ul>
+<li><a href="http://www.cnblogs.com/dolphin0520/p/3920407.html" target="_blank" rel="noopener">深入剖析ThreadLocal</a></li>
+</ul>
+<hr>
+<h3 id="2-java内存模型"><a href="#2-java内存模型" class="headerlink" title="2.java内存模型"></a>2.java内存模型</h3><p>Java内存模型定义了多线程之间共享变量的可见性以及如何在需要的时候对共享变量进行同步，在并发编程领域，有两个关键问题：线程之间的通信和同步。Java线程之间的通信采用的是共享内存模型，JMM决定一个线程对共享变量的写入何时对另一个线程可见。<strong>线程之间的共享变量存储在主内存（main memory）中，每个线程都有一个私有的本地内存（local memory），本地内存中存储了该线程以读/写共享变量的副本。</strong></p>
+<ul>
+<li><a href="http://blog.csdn.net/suifeng3051/article/details/52611310" target="_blank" rel="noopener">全面理解Java内存模型
+</a></li>
+<li><a href="http://www.importnew.com/23629.html" target="_blank" rel="noopener">JVM内存的那些事</a></li>
+</ul>
+<hr>
+<h3 id="3-聊聊JVM的体系结构？"><a href="#3-聊聊JVM的体系结构？" class="headerlink" title="3.聊聊JVM的体系结构？"></a>3.聊聊JVM的体系结构？</h3><ul>
+<li>程序计数器：每个线程都有，是当前线程所执行的字节码的行号指示器。Java虚拟机的多线程就是通过线程轮流切换并分配处理器时间来实现的，为了线程切换后能恢复到正确的位置，每条线程都需要一个独立的程序计数器，互不影响，该区域为“线程私有”。</li>
+<li>Java虚拟机栈：线程私有的，与线程生命周期相同，用于存储局部变量表，操作数栈、动态链接、方法返回值。局部变量表放着基本数据类型，还有对象的引用。</li>
+<li>本地方法栈：跟虚拟机栈很像，不过它是为虚拟机使用到的Native方法服务。</li>
+<li>Java堆：所有线程共享的一块内存区域，对象实例几乎都在这分配内存。</li>
+<li>方法区：各个线程共享的区域，储存虚拟机加载的类信息，常量，静态变量，编译后的代码。运行时常量池是方法区的一部分，用于存放编译期间生成的各种字面常量和符号引用。</li>
+<li>运行时常量池：代表运行时每个class文件中的常量表。包括几种常量：编译时的数字常量、方法或者域的引用。</li>
+</ul>
+<hr>
+<h3 id="4-谈谈Java-GC是在什么时候，对什么东西，做了什么事情？"><a href="#4-谈谈Java-GC是在什么时候，对什么东西，做了什么事情？" class="headerlink" title="4.谈谈Java GC是在什么时候，对什么东西，做了什么事情？"></a>4.谈谈Java GC是在什么时候，对什么东西，做了什么事情？</h3><p>虚拟机把堆内存划分成新生代（Young Generation）、老年代（Old Generation）和永久代（Permanent Generation）3个区域。新生代由 Eden 与 Survivor Space（S0，S1）构成,默认是8：1，大多数情况下，对象在Eden中分配，当Eden没有足够空间时，会触发一次Minor GC，当新生代发生GC（Minor GC）时，会将存活的对象移动到S0内存区域，并清空Eden区域，当再次发生Minor GC时，将Eden和S0中存活的对象移动到S1内存区域。存活对象会反复在S0和S1之间移动，当对象从Eden移动到Survivor或者在Survivor之间移动时，对象的GC年龄自动累加，当GC年龄超过默认阈值15时，会将该对象移动到老年代。当老年代的空间不足时，会触发Major GC/Full GC，速度一般比Minor GC慢10倍以上。</p>
+<ul>
+<li>收集算法：1、标记-清除算法；2、复制算法；3、标记-整理算法；4、分代收集算法</li>
+<li>垃圾收集器：1.Serial收集器、2.ParNew收集器、3、Parallel Scavenge收集器（并行回收GC）4、Serial Old收集器（串行GC）5、Parallel Old收集器（并行GC）6、CMS收集器（并发GC）7、G1收集器</li>
+<li><a href="http://www.importnew.com/23633.html" target="_blank" rel="noopener">Java GC的那些事（上）</a></li>
+<li><a href="http://www.jianshu.com/p/94989b278114" target="_blank" rel="noopener">Java GC的那些事（下）</a></li>
+</ul>
+<hr>
+<h3 id="5-谈谈sychronized和Lock？"><a href="#5-谈谈sychronized和Lock？" class="headerlink" title="5.谈谈sychronized和Lock？"></a>5.谈谈sychronized和Lock？</h3><ul>
+<li>synchronized都是隐式获取和释放锁，Lock是显式的获取和释放。但是Lock比synchronized更灵活，比如，先获得锁A再获得锁B，当获得锁B时释放锁A，同时获取锁C，Lock更容易操作。</li>
+<li>Lock多了定时锁等候和中断锁等候﻿， 线程A和B都要获取对象O的锁定，假设A获取了对象O锁，B将等待A释放对O的锁定，﻿如果使用 synchronized ，如果A不释放，B将一直等下去，不能被中断﻿，如果 使用ReentrantLock，如果A不释放，可以使B在等待了足够长的时间以后，中断等待，而干别的事情﻿。同样，截止时间到了仍旧无法获取锁，则返回。</li>
+<li>synchronized是在JVM层面上实现的，不但可以通过一些监控工具监控synchronized的锁定，而且在代码执行时出现异 常，JVM会自动释放锁定，但是使用Lock则不行，lock是通过代码实现的，要保证锁定一定会被释放，就必须将unLock()放到 finally{}中。</li>
+<li>在资源竞争不是很激烈的情况下，Synchronized的性能要优于ReetrantLock，但是在资源竞争很激烈的情况下，synchronized的性能会下降几十倍，但是ReetrantLock的性能能维持常态；﻿</li>
+</ul>
+<hr>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/08/String中的intern方法/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tiger">
+      <meta itemprop="description" content="上不知天文，下不知地理">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="tiger's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2017/05/08/String中的intern方法/" class="post-title-link" itemprop="url">String中的intern方法</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-05-08 14:16 14:16:12" itemprop="dateCreated datePublished" datetime="2017-05-08T14:16:12+08:00">2017-05-08 14:16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2017-05-16 16:41 16:41:10" itemprop="dateModified" datetime="2017-05-16T16:41:10+08:00">2017-05-16 16:41</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/JAVA语言/" itemprop="url" rel="index"><span itemprop="name">JAVA语言</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/08/String中的intern方法/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/05/08/String中的intern方法/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/08/String中的intern方法/" class="leancloud_visitors" data-flag-title="String中的intern方法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>首先先提出一个问题，String str=new String(“abc”);这行代码究竟创建了几个String对象呢？</strong><br>答案是2个，一个存放在堆中，一个存放在字符串常量池中。<br><strong>String a=”abc”;  String b=”abc”;那这里呢？</strong><br>答案是一个，因为是从常量池中获取的同一个对象<br><strong>String a=”ab”+”cd”;再看看这里呢？</strong><br>创建了3个对象，分别是“ab”，”cd”和“abcd”<br>我们再回头看看String a=”abc”;，这行代码被执行的时候，JAVA虚拟机首先在字符串池中查找是否已经存在了值为”abc”的这么一个对象，它的判断依据是String类equals(Object obj)方法的返回值。如果有，则不再创建新的对象，直接返回已存在对象的引用；如果没有，则先创建这个对象，然后把它加入到字符串池中，再将它的引用返回。因此，我们不难理解前面三个例子中头两个例子为什么是这个答案了。<br>只有使用引号包含文本的方式创建的String对象之间使用“+”连接产生的新对象才会被加入字符串池中。对于所有包含new方式新建对象（包括null）的“+”连接表达式，<strong>它所产生的新对象都不会被加入字符串池中</strong>，因此我们提倡大家用引号包含文本的方式来创建String对象以提高效率，实际上这也是我们在编程中常采用的。<br>例如：String s3 = new String(“1”) + new String(“1”);其产生4个对象，撇去两个匿名对象不作讨论，剩下两个一个是常量池中的“1”，还有一个堆中的new String(“11”)对象，注意常量池中并没有”11”<br>下面来看一段代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;<span class="comment">//jdk7中运行</span></span><br><span class="line">    String s = <span class="keyword">new</span> String(<span class="string">"1"</span>);</span><br><span class="line">    s.intern();</span><br><span class="line">    String s2 = <span class="string">"1"</span>;</span><br><span class="line">    System.out.println(s == s2);<span class="comment">//false,s指向堆中，s2指向常量池</span></span><br><span class="line"></span><br><span class="line">    String s3 = <span class="keyword">new</span> String(<span class="string">"1"</span>) + <span class="keyword">new</span> String(<span class="string">"1"</span>);</span><br><span class="line">    s3.intern();<span class="comment">//常量池中生成了一个指向堆的引用（并不是复制对象到常量池中了）</span></span><br><span class="line">    String s4 = <span class="string">"11"</span>;</span><br><span class="line">    System.out.println(s3 == s4);<span class="comment">//true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后将<strong>s3.intern();</strong> 语句下调一行:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    String s = <span class="keyword">new</span> String(<span class="string">"1"</span>);</span><br><span class="line">    String s2 = <span class="string">"1"</span>;</span><br><span class="line">    s.intern();</span><br><span class="line">    System.out.println(s == s2);<span class="comment">//false</span></span><br><span class="line"></span><br><span class="line">    String s3 = <span class="keyword">new</span> String(<span class="string">"1"</span>) + <span class="keyword">new</span> String(<span class="string">"1"</span>);<span class="comment">//此时常量池中并没有“11”</span></span><br><span class="line">    String s4 = <span class="string">"11"</span>;</span><br><span class="line">    s3.intern();<span class="comment">//此时常量池已经有"11"了，故此句返回是s4，并不是指向s3</span></span><br><span class="line">    System.out.println(s3 == s4);<span class="comment">//false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>注：<strong>String.intern()</strong> 在常量池中存在该对象，则返回，如不存在则会直接保存对象的引用，而不会重新创建对象。<br>同样的道理：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String str1=<span class="keyword">new</span> StringBuilder(<span class="string">"计算机"</span>).toString();<span class="comment">//创建了两个对象，一个堆中，一个常量池中</span></span><br><span class="line">System.out.println(str1.intern()==str1);<span class="comment">//false，因为str1.intern()指向的是常量池中的对象</span></span><br><span class="line">String str2=<span class="keyword">new</span> StringBuilder(<span class="string">"计算机"</span>).append(<span class="string">"软件"</span>).toString();<span class="comment">//常量池中并没有"计算机软件"</span></span><br><span class="line">System.out.println(str2.intern()==str2);<span class="comment">//true，常量池中存储堆中的引用。这份引用指向str2引用的对象</span></span><br></pre></td></tr></table></figure></p>
+<p><strong><em>注：读《深入理解java虚拟机》p57之后学习了本知识点</em></strong></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/26/如何求解中缀表达式/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tiger">
+      <meta itemprop="description" content="上不知天文，下不知地理">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="tiger's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2017/04/26/如何求解中缀表达式/" class="post-title-link" itemprop="url">如何求解中缀表达式</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-04-26 10:57 10:57:42" itemprop="dateCreated datePublished" datetime="2017-04-26T10:57:42+08:00">2017-04-26 10:57</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2017-04-26 17:33 17:33:21" itemprop="dateModified" datetime="2017-04-26T17:33:21+08:00">2017-04-26 17:33</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/常用算法/" itemprop="url" rel="index"><span itemprop="name">常用算法</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/26/如何求解中缀表达式/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/04/26/如何求解中缀表达式/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/04/26/如何求解中缀表达式/" class="leancloud_visitors" data-flag-title="如何求解中缀表达式">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><strong>中缀表达式:</strong> 即我们常看到的表达式如<strong>3+2*(4+6)+5</strong>，但是对于计算机而言处理中缀表达式要比处理后缀表达式困难的多,那何为后缀表达式呢？<br><strong>后缀表达式:</strong> 如上面的中缀表达式转换成后缀表达式即为:<strong>3246+*+5</strong> ,可以看到去除了中缀表达式的括号，因为计算的优先级在式中已经体现出来。<br><strong>处理过程:</strong> 遍历后缀表达式这个式子，遇到数字就放入栈中，遇到符号则弹出栈顶的两个元素进行计算，计算结果再push到栈中，以此类推到最后一次运算后，栈中只有一个元素，这个就是最后表达式求出来的值。<br><strong><em>那现在如何将中缀表达式转换成后缀表达式呢？</em></strong><br></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2017/04/26/如何求解中缀表达式/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/25/Tree/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tiger">
+      <meta itemprop="description" content="上不知天文，下不知地理">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="tiger's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2017/04/25/Tree/" class="post-title-link" itemprop="url">Tree</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-04-25 09:27 09:27:24" itemprop="dateCreated datePublished" datetime="2017-04-25T09:27:24+08:00">2017-04-25 09:27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2017-07-03 21:56 21:56:10" itemprop="dateModified" datetime="2017-07-03T21:56:10+08:00">2017-07-03 21:56</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/OJ/" itemprop="url" rel="index"><span itemprop="name">OJ</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/25/Tree/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/04/25/Tree/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/04/25/Tree/" class="leancloud_visitors" data-flag-title="Tree">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><strong><em>1.<br>Given a binary tree, find its maximum depth.The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.(求二叉树的最大深度)</em></strong><br><strong>way1:</strong> 层次遍历–&gt;每进一层加1<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for binary tree</span></span><br><span class="line"><span class="comment"> * public class TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode left;</span></span><br><span class="line"><span class="comment"> *     TreeNode right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxDepth</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> depth=<span class="number">0</span>;</span><br><span class="line">        LinkedList&lt;TreeNode&gt; list=<span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        list.add(root);</span><br><span class="line">        <span class="keyword">while</span>(!list.isEmpty())&#123;</span><br><span class="line">            depth++;</span><br><span class="line">            <span class="keyword">int</span> len=list.size();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">                TreeNode temp=list.poll();</span><br><span class="line">                <span class="keyword">if</span>(temp.left!=<span class="keyword">null</span>) list.add(temp.left);</span><br><span class="line">                <span class="keyword">if</span>(temp.right!=<span class="keyword">null</span>) list.add(temp.right);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> depth;     </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2017/04/25/Tree/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/22/A-story-of-Unicode-and-UTF-8/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tiger">
+      <meta itemprop="description" content="上不知天文，下不知地理">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="tiger's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2017/04/22/A-story-of-Unicode-and-UTF-8/" class="post-title-link" itemprop="url">A story of Unicode and UTF-8</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-04-22 12:23 12:23:53" itemprop="dateCreated datePublished" datetime="2017-04-22T12:23:53+08:00">2017-04-22 12:23</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2017-04-22 14:17 14:17:07" itemprop="dateModified" datetime="2017-04-22T14:17:07+08:00">2017-04-22 14:17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/CS基础/" itemprop="url" rel="index"><span itemprop="name">CS基础</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/22/A-story-of-Unicode-and-UTF-8/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/04/22/A-story-of-Unicode-and-UTF-8/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/04/22/A-story-of-Unicode-and-UTF-8/" class="leancloud_visitors" data-flag-title="A story of Unicode and UTF-8">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>很久很久以前，有一群人，他们决定用8个可以开合的晶体管来组合成不同的状态，以表示世界上的万物。他们看到8个开关状态是好的，于是他们把这称为”字节“。再后来，他们又做了一些可以处理这些字节的机器，机器开动了，可以用字节来组合出很多状态，状态开始变来变去。他们看到这样是好的，于是它们就这机器称为”计算机“。</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2017/04/22/A-story-of-Unicode-and-UTF-8/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -963,7 +2266,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -978,7 +2281,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -993,7 +2304,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
