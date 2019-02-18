@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Maven中如何解决jar包冲突]]></title>
+    <url>%2F2019%2F02%2F18%2FMaven%E4%B8%AD%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3jar%E5%8C%85%E5%86%B2%E7%AA%81%2F</url>
+    <content type="text"><![CDATA[现象程序启动运行时报出类似如下的错误 12Caused by:java.lang.NoSuchMethodErrorCaused by: java.lang.ClassNotFoundException 原因 假设当前工程A依赖B和C，而B依赖D(version=1.1),C依赖D(version=1.2)，Maven根据依赖的最短路径原则可能A工程最终引用到的jar包来自于工程B，C，D(version=1.1)，而我们A代码中调用的某个方法来自于高版本的D(version=1.2)，所以会出现以上类型的错误。 解决思路 根据报错信息，确定出现问题的jar包，idea中可以通过全局搜索类文件(ctrl+shift+n)，再定位jar包。 分析项目中要使用的jar包到底是哪一个 通过mvn dependency:tree &gt; tree.txt导出当前maven工程所依赖的jar包树结构 定位到需要去除的jar包的父模块，通过&lt;exclusions&gt;来进行排除]]></content>
+      <tags>
+        <tag>Maven</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[微服务基础梳理]]></title>
     <url>%2F2019%2F02%2F08%2F%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%9F%BA%E7%A1%80%E6%A2%B3%E7%90%86%2F</url>
     <content type="text"><![CDATA[微服务架构的特点 微服务带来的利弊]]></content>
