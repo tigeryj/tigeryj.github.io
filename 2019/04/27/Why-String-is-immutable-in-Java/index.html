@@ -105,7 +105,7 @@
 <meta property="og:description" content="String is immutable in Java. An immutable class is simply a class whose instances cannot be modified. All information in an instance is initialized when the instance is created and the information can">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2019/04/27/Why-String-is-immutable-in-Java/java-string-pool.jpeg">
-<meta property="og:updated_time" content="2019-04-27T12:57:05.720Z">
+<meta property="og:updated_time" content="2019-04-27T13:00:07.371Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Why String is immutable in Java?">
 <meta name="twitter:description" content="String is immutable in Java. An immutable class is simply a class whose instances cannot be modified. All information in an instance is initialized when the instance is created and the information can">
@@ -468,7 +468,7 @@
       
         <p><code>String</code> is immutable in Java. An immutable class is simply a class whose instances cannot be modified. All information in an instance is initialized when the instance is created and the information can not be modified. There are many advantages of immutable classes. This article summarizes why <a href="https://www.programcreek.com/2009/02/diagram-to-show-java-strings-immutability/" target="_blank" rel="noopener"><code>String</code> is designed to be immutable</a>. This post illustrate the immutability concept in the perspective of memory, synchronization and data structures.</p>
 <a id="more"></a>
-<h2 id="Requirement-of-String-Pool"><a href="#Requirement-of-String-Pool" class="headerlink" title="Requirement of String Pool"></a>Requirement of String Pool</h2><p>String pool (String intern pool) is a special storage area in <a href="https://www.programcreek.com/2013/04/jvm-run-time-data-areas/" target="_blank" rel="noopener">Method Area</a>. When a string is created and if the string already exists in the pool, the reference of the existing string will be returned, instead of creating a new object.</p>
+<h3 id="Requirement-of-String-Pool"><a href="#Requirement-of-String-Pool" class="headerlink" title="Requirement of String Pool"></a>Requirement of String Pool</h3><p>String pool (String intern pool) is a special storage area in <a href="https://www.programcreek.com/2013/04/jvm-run-time-data-areas/" target="_blank" rel="noopener">Method Area</a>. When a string is created and if the string already exists in the pool, the reference of the existing string will be returned, instead of creating a new object.</p>
 <p>The following code will create only one string object in the heap.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String string1 = <span class="string">"abcd"</span>;</span><br><span class="line">String string2 = <span class="string">"abcd"</span>;</span><br></pre></td></tr></table></figure>
 <p>Here is how it looks:</p>
@@ -704,7 +704,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Requirement-of-String-Pool"><span class="nav-number">1.</span> <span class="nav-text">Requirement of String Pool</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Caching-Hashcode"><span class="nav-number">1.1.</span> <span class="nav-text">Caching Hashcode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Facilitating-the-Use-of-Other-Objects"><span class="nav-number">1.2.</span> <span class="nav-text">Facilitating the Use of Other Objects</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Security"><span class="nav-number">1.3.</span> <span class="nav-text">Security</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Immutable-objects-are-naturally-thread-safe"><span class="nav-number">1.4.</span> <span class="nav-text">Immutable objects are naturally thread-safe</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement-of-String-Pool"><span class="nav-number">1.</span> <span class="nav-text">Requirement of String Pool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Caching-Hashcode"><span class="nav-number">2.</span> <span class="nav-text">Caching Hashcode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Facilitating-the-Use-of-Other-Objects"><span class="nav-number">3.</span> <span class="nav-text">Facilitating the Use of Other Objects</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Security"><span class="nav-number">4.</span> <span class="nav-text">Security</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Immutable-objects-are-naturally-thread-safe"><span class="nav-number">5.</span> <span class="nav-text">Immutable objects are naturally thread-safe</span></a></li></ol></div>
             
 
           </div>
