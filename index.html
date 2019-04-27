@@ -466,30 +466,16 @@
 
       
         
+          <p><code>String</code> is immutable in Java. An immutable class is simply a class whose instances cannot be modified. All information in an instance is initialized when the instance is created and the information can not be modified. There are many advantages of immutable classes. This article summarizes why <a href="https://www.programcreek.com/2009/02/diagram-to-show-java-strings-immutability/" target="_blank" rel="noopener"><code>String</code> is designed to be immutable</a>. This post illustrate the immutability concept in the perspective of memory, synchronization and data structures.</p>
+          <!--noindex-->
           
-            <p><code>String</code> is immutable in Java. An immutable class is simply a class whose instances cannot be modified. All information in an instance is initialized when the instance is created and the information can not be modified. There are many advantages of immutable classes. This article summarizes why <a href="https://www.programcreek.com/2009/02/diagram-to-show-java-strings-immutability/" target="_blank" rel="noopener"><code>String</code> is designed to be immutable</a>. This post illustrate the immutability concept in the perspective of memory, synchronization and data structures.</p>
-<h3 id="Requirement-of-String-Pool"><a href="#Requirement-of-String-Pool" class="headerlink" title="Requirement of String Pool"></a>Requirement of String Pool</h3><p>String pool (String intern pool) is a special storage area in <a href="https://www.programcreek.com/2013/04/jvm-run-time-data-areas/" target="_blank" rel="noopener">Method Area</a>. When a string is created and if the string already exists in the pool, the reference of the existing string will be returned, instead of creating a new object.</p>
-<p>The following code will create only one string object in the heap.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String string1 = <span class="string">"abcd"</span>;</span><br><span class="line">String string2 = <span class="string">"abcd"</span>;</span><br></pre></td></tr></table></figure>
-<p>Here is how it looks:</p>
-<p><img src="/2019/04/27/Why-String-is-immutable-in-Java/java-string-pool.jpeg" alt=""></p>
-<p>If a string is mutable, changing the string with one reference will lead to the wrong value for the other references.</p>
-<h3 id="Caching-Hashcode"><a href="#Caching-Hashcode" class="headerlink" title="Caching Hashcode"></a>Caching Hashcode</h3><p>The hashcode of a string is frequently used in Java. For example, in a HashMap or HashSet. Being immutable guarantees that hashcode will always be the same so that it can be cashed without worrying about the changes.That means, there is no need to calculate hashcode every time it is used. This is more efficient.</p>
-<p>In String class, it has the following code:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> hash;<span class="comment">//this is used to cache hash code.</span></span><br></pre></td></tr></table></figure>
-<h3 id="Facilitating-the-Use-of-Other-Objects"><a href="#Facilitating-the-Use-of-Other-Objects" class="headerlink" title="Facilitating the Use of Other Objects"></a>Facilitating the Use of Other Objects</h3><p>To make this concrete, consider the following program:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">HashSet&lt;String&gt; set = <span class="keyword">new</span> HashSet&lt;String&gt;();</span><br><span class="line">set.add(<span class="keyword">new</span> String(<span class="string">"a"</span>));</span><br><span class="line">set.add(<span class="keyword">new</span> String(<span class="string">"b"</span>));</span><br><span class="line">set.add(<span class="keyword">new</span> String(<span class="string">"c"</span>));</span><br><span class="line"><span class="keyword">for</span>(String a: set)</span><br><span class="line">a.value = <span class="string">"a"</span>;</span><br></pre></td></tr></table></figure>
-<p>In this example, if String is mutable, its value can be changed which would violate the design of set (set contains unduplicated elements). Of curse, the example above is just for demonstration purpose and there is no <code>value</code> field in a real string class.</p>
-<h3 id="Security"><a href="#Security" class="headerlink" title="Security"></a>Security</h3><p>String is widely used as a parameter for many java classes, e.g. network connection, opening files, etc. Were String not immutable, a connection or file would be changed and this can lead to a serious security threat. The method thought it was connecting to one machine, but was not. Mutable strings could cause a security problem in Reflection too, as the parameters are strings.</p>
-<p>Here is a code example:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">connect</span><span class="params">(string s)</span></span>&#123;</span><br><span class="line"><span class="keyword">if</span> (!isSecure(s)) &#123;</span><br><span class="line"><span class="keyword">throw</span> <span class="keyword">new</span> SecurityException();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//here will cause problem, if s is changed before this by using other references.</span></span><br><span class="line">causeProblem(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Immutable-objects-are-naturally-thread-safe"><a href="#Immutable-objects-are-naturally-thread-safe" class="headerlink" title="Immutable objects are naturally thread-safe"></a>Immutable objects are naturally thread-safe</h3><p>Because immutable objects can not be changed, they can be shared among multiple threads freely. This eliminates the requirements of doing synchronization.</p>
-<p>In summary, <code>String</code> is designed to be immutable for efficiency and security reasons. This is also the reason why immutable classes are preferred in many cases in general.</p>
-<blockquote>
-<p><a href="https://www.programcreek.com/2013/04/why-string-is-immutable-in-java/" target="_blank" rel="noopener">参考原文</a></p>
-</blockquote>
-
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/04/27/Why-String-is-immutable-in-Java/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           
+          <!--/noindex-->
         
       
     </div>
